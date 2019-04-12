@@ -1,11 +1,12 @@
 package com.epam.pool.observer;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class PostOffice implements Subscrieble {
 
     private static ArrayList<Subscriber> subscribers = new ArrayList<>();
-    private static ArrayList<String> publications = new ArrayList<>();
+    private static LinkedList<String> publications = new LinkedList<>();
 
     public void addNewPublication(String publication){
         publications.add(publication);
@@ -25,7 +26,7 @@ public class PostOffice implements Subscrieble {
     @Override
     public void distributeUpdates() {
         for (Subscriber subscriber : subscribers) {
-            subscriber.update(publications.get(publications.size()-1));
+            subscriber.update(publications.getLast());
         }
     }
 }
