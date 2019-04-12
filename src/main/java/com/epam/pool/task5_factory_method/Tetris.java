@@ -8,8 +8,22 @@ public class Tetris {
         startPlaying(100, 0.1);
     }
 
+    /**
+     * This method is already like simple factory BUT ...
+     * it prints random figures from arrays instead of
+     * making same thing but with "case"/"if else".
+     *
+     * This approach gives us more flexibility, cause we don't need
+     * to write or erase new case's or 'if's , we simply can write
+     * or erase new FigureCreator child to array.
+     *
+     * benefits (compare to simple factory):
+     *
+     * 1) 1 line of code instead of 2-3 when adding creators.
+     * 2) don't need to fix random part after adding, or erasing creators
+     */
+    private static void startPlaying(int figuresCount, double superFigureChance) {
 
-    private static void startPlaying(int figuresNumber, double superFigureChance) {
         FigureCreator[] normalFigureCreators = {
                 new IFigureCreator(),
                 new LFigureCreator(),
@@ -17,6 +31,7 @@ public class Tetris {
                 new TFigureCreator(),
                 new ZFigureCreator()
         };
+
         FigureCreator[] superFigureCreators = {
                 new SuperIFigureCreator(),
                 new SuperLFigureCreator(),
@@ -27,7 +42,8 @@ public class Tetris {
 
         FigureCreator[] currentlyUsingFigures;
 
-        for (int i = 0; i < figuresNumber; i++) {
+
+        for (int i = 0; i < figuresCount; i++) {
             currentlyUsingFigures = Math.random() < superFigureChance ? superFigureCreators : normalFigureCreators;
             int randomNumber = (int) (Math.random() * currentlyUsingFigures.length - 1);
             System.out.println("drawing: " + currentlyUsingFigures[randomNumber].createFigure().getName());
