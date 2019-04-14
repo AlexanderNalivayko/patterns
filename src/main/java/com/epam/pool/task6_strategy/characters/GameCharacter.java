@@ -15,6 +15,11 @@ public class GameCharacter implements Character {
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
     public CharacterType getType() {
         return characterType;
     }

@@ -3,12 +3,20 @@ package com.epam.pool.task6_strategy;
 import com.epam.pool.task6_strategy.characters.Character;
 import com.epam.pool.task6_strategy.characters.CharacterType;
 import com.epam.pool.task6_strategy.characters.move.Flying;
+import com.epam.pool.task6_strategy.characters.move.Movable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class StandardSquad implements Squad {
 
     private ArrayList<Character> characters = new ArrayList<>();
+    Movable move;
+
+    public StandardSquad(Movable move, Character... characters) {
+        this.move = move;
+        this.characters.addAll(Arrays.asList(characters));
+    }
 
     @Override
     public void addCharacter(Character character) {
@@ -22,21 +30,11 @@ public class StandardSquad implements Squad {
 
     @Override
     public void move() {
-        boolean magsInSquad = false;
+        StringBuilder stringBuilder = new StringBuilder();
         for (Character character : characters) {
-            if (CharacterType.MAGICIAN.equals(character.getType())) {
-                magsInSquad = true;
-            }
+            stringBuilder.append(character.getName() + " ");
         }
-        if (magsInSquad) {
-            for (Character character : characters) {
-                character.setMove(new Flying());
-                character.move();
-            }
-        } else {
-            for (Character character : characters) {
-                character.move();
-            }
-        }
+        stringBuilder.append(move.getMoveType());
+        System.out.println(stringBuilder.toString());
     }
 }

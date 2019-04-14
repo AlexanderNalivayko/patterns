@@ -11,23 +11,15 @@ public class Runner {
 
     public static void main(String[] args) {
 
+        GameCharacter gandalf = new GameCharacter("Gandalf", CharacterType.MAGICIAN, new Flying());
+        GameCharacter bella = new GameCharacter("Bella", CharacterType.WARRIOR, new Walking());
+        GameCharacter optimus = new GameCharacter("Optimus", CharacterType.WARRIOR, new FlyingAndWalking());
 
-        Character[] characters = {
-                new GameCharacter("Gandalf", CharacterType.MAGICIAN, new Flying()),
-                new GameCharacter("Bella", CharacterType.WARRIOR, new Walking()),
-                new GameCharacter("Optimus", CharacterType.WARRIOR, new FlyingAndWalking())
-        };
+        gandalf.move();
+        bella.move();
+        optimus.move();
 
-        //everyone moves by own way
-        for (Character character : characters) {
-            character.move();
-        }
-
-        //but if we gonna add all characters to one squad, they gonna fly by magic powers og gandalf :)
-        Squad squad = new StandardSquad();
-        for (Character character : characters) {
-            squad.addCharacter(character);
-        }
+        Squad squad = new StandardSquad(new Flying(), gandalf, bella, optimus);
         squad.move();
     }
 }
