@@ -8,7 +8,7 @@ public class PostOffice implements Subscrieble {
     private static ArrayList<Subscriber> subscribers = new ArrayList<>();
     private static LinkedList<String> publications = new LinkedList<>();
 
-    public void addNewPublication(String publication){
+    public void addNewPublication(String publication) {
         publications.add(publication);
         distributeUpdates();
     }

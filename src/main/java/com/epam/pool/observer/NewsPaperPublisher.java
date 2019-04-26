@@ -1,6 +1,7 @@
 package com.epam.pool.observer;
 
-public class NewesPaperPublisher implements Publisher {
+public class NewsPaperPublisher implements Publisher {
+
     @Override
     public String publish() {
         return "Daily News";

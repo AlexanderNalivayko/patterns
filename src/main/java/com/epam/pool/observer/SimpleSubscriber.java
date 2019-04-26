@@ -2,8 +2,8 @@ package com.epam.pool.observer;
 
 public class SimpleSubscriber implements Subscriber {
 
-    String name;
-    String address;
+    private String name;
+    private String address;
 
     public SimpleSubscriber(String name, String address) {
         this.name = name;
