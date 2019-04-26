@@ -3,7 +3,7 @@ package com.epam.pool.task11_flyweight;
 import java.util.HashMap;
 
 public class BacteriaFactory {
-    private HashMap<StreptococcusType, Bacteria> characters = new HashMap();
+    private HashMap<StreptococcusType, Bacteria> characters = new HashMap<>();
 
     public Bacteria getBacteria(StreptococcusType streptococcusType){
         Bacteria character = characters.get(streptococcusType);
