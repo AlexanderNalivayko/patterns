@@ -3,7 +3,6 @@ package com.epam.pool.task6_strategy.characters;
 import com.epam.pool.task6_strategy.characters.move.Movable;
 
 public class GameCharacter implements Character {
-
     private String name;
     private CharacterType characterType;
     private Movable move;

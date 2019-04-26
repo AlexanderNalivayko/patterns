@@ -1,8 +1,6 @@
 package com.epam.pool.task6_strategy;
 
 import com.epam.pool.task6_strategy.characters.Character;
-import com.epam.pool.task6_strategy.characters.CharacterType;
-import com.epam.pool.task6_strategy.characters.move.Flying;
 import com.epam.pool.task6_strategy.characters.move.Movable;
 
 import java.util.ArrayList;
@@ -32,7 +30,7 @@ public class StandardSquad implements Squad {
     public void move() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Character character : characters) {
-            stringBuilder.append(character.getName() + " ");
+            stringBuilder.append(character.getName()).append(" ");
         }
         stringBuilder.append(move.getMoveType());
         System.out.println(stringBuilder.toString());
