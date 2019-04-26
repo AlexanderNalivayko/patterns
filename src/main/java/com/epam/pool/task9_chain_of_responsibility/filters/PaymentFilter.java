@@ -3,7 +3,6 @@ package com.epam.pool.task9_chain_of_responsibility.filters;
 import com.epam.pool.task9_chain_of_responsibility.Payment;
 
 public abstract class PaymentFilter {
-
     public static int BANK = 3;
     public static int WITH_TAXES = 5;
     public static int WITH_COMMISSIONS_AND_TAXES = 7;

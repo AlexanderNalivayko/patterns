@@ -10,13 +10,13 @@ public class ValidationFilter extends PaymentFilter {
 
     @Override
     void doFilter(Payment payment) {
-        System.out.println("validation filter for " + payment);
+        System.out.println("Validation filter for " + payment);
         if (payment == null
                 || payment.getTotal() == null
                 || payment.getSum() == null
                 || payment.getFrom() < 0
                 || payment.getTo() < 0) {
-            throw new IllegalArgumentException("Can not perform such payment");
+            throw new IllegalArgumentException("Can't perform such payment");
         }
     }
 }

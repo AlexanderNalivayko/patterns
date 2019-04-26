@@ -3,7 +3,6 @@ package com.epam.pool.task9_chain_of_responsibility;
 import java.math.BigDecimal;
 
 public class Payment {
-
     private long from;
     private long to;
     private BigDecimal sum;
