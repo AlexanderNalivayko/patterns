@@ -24,7 +24,6 @@ public class Runner {
     }
 
     private static LocalisationFactory createFactory(String language) {
-
         if (Language.ENGLISH.name().equalsIgnoreCase(language)) {
             return new EnglishLocalisationFactory();
         } else if (Language.UKRAINIAN.name().equalsIgnoreCase(language)) {

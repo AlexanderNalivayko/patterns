@@ -5,8 +5,8 @@ import com.epam.pool.task3_abstract_factory.localisations.Subtitles;
 
 public class Movie {
 
-    Audio audio;
-    Subtitles subtitles;
+    private Audio audio;
+    private Subtitles subtitles;
 
     public Movie(LocalisationFactory localisationFactory) {
         this.audio = localisationFactory.createAudio();
