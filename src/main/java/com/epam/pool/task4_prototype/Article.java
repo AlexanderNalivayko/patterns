@@ -1,7 +1,6 @@
 package com.epam.pool.task4_prototype;
 
 public class Article implements Copyable {
-
     private int id;
     private String title;
     private String text;
@@ -61,7 +60,6 @@ public class Article implements Copyable {
                 '}';
     }
 
-
     public Article copy() {
         return new Article(id, title, text, lastModified);
     }
@@ -70,14 +68,11 @@ public class Article implements Copyable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Article article = (Article) o;
-
         if (id != article.id) return false;
         if (title != null ? !title.equals(article.title) : article.title != null) return false;
         if (text != null ? !text.equals(article.text) : article.text != null) return false;
         return lastModified != null ? lastModified.equals(article.lastModified) : article.lastModified == null;
-
     }
 
     @Override

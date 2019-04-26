@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class Wikipedia implements Encyclopedia {
-
     private HashMap<Integer, Article> articles = new HashMap<>();
     private int counter = 0;
 
