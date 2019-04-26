@@ -6,7 +6,7 @@ public class ApprovedState implements State {
 
     @Override
     public String onCreate(Grant grant) {
-        return CANT_DO_THAT ;
+        return CANT_DO_THAT;
     }
 
     @Override

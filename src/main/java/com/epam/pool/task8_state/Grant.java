@@ -3,7 +3,6 @@ package com.epam.pool.task8_state;
 import com.epam.pool.task8_state.grant_states.State;
 
 public class Grant {
-
     private String name;
     private State state;
 
