@@ -1,7 +1,6 @@
 package com.epam.pool.taskx_medical_prescription;
 
 public class Prescription {
-
     private String patient;
     private String doctor;
     private String medicine;
@@ -48,9 +47,9 @@ public class Prescription {
 
     private Prescription(Builder builder) {
         this.patient = builder.patient != null ? builder.patient : this.patient;
-        this.doctor = builder.doctor!= null ? builder.doctor : this.doctor;
-        this.medicine = builder.medicine!= null ? builder.medicine : this.medicine;
-        this.date = builder.date!= null ? builder.date : this.date;
+        this.doctor = builder.doctor != null ? builder.doctor : this.doctor;
+        this.medicine = builder.medicine != null ? builder.medicine : this.medicine;
+        this.date = builder.date != null ? builder.date : this.date;
         this.validityDays = builder.validityDays > 0 ? builder.validityDays : this.validityDays;
     }
 

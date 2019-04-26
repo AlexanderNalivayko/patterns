@@ -5,10 +5,8 @@ import java.util.Date;
 
 public class Runner {
 
-    public static void main(String[] args) throws InterruptedException {
-
+    public static void main(String[] args) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss,SSS DD.MM.YYYY");
-
         Prescription.Builder prescriptionBuilder = new Prescription.Builder()
                 .setPatient("Mr Smith")
                 .setDoctor("Dr. Johns")
