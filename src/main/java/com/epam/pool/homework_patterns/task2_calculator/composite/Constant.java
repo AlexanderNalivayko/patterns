@@ -2,7 +2,7 @@ package com.epam.pool.homework_patterns.task2_calculator.composite;
 
 public class Constant implements Expression {
 
-    int value;
+    private int value;
 
     public Constant(int value) {
         this.value = value;
