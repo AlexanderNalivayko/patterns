@@ -23,9 +23,12 @@ public class Tetris {
      *
      * 1) 1 line of code instead of 2-3 when adding creators.
      * 2) don't need to fix 'random-logic' part after adding, or erasing creators
+     *
+     * limitations:
+     * 1) It creates all figures on firs call of startPlaying() [which, in case of tetris,
+     * good idea, in terms of speed]
      */
     private static void startPlaying(int figuresCount, double superFigureChance) {
-
         FigureCreator[] normalFigureCreators = {
                 new IFigureCreator(),
                 new LFigureCreator(),
@@ -33,7 +36,6 @@ public class Tetris {
                 new TFigureCreator(),
                 new ZFigureCreator()
         };
-
         FigureCreator[] superFigureCreators = {
                 new SuperIFigureCreator(),
                 new SuperLFigureCreator(),
@@ -43,8 +45,6 @@ public class Tetris {
         };
 
         FigureCreator[] currentlyUsingFigures;
-
-
         for (int i = 0; i < figuresCount; i++) {
             currentlyUsingFigures = Math.random() < superFigureChance ? superFigureCreators : normalFigureCreators;
             int randomNumber = (int) (Math.random() * currentlyUsingFigures.length - 1);
