@@ -2,7 +2,6 @@ package com.epam.pool.task10_memento;
 
 public class Runner {
     public static void main(String[] args) {
-
         XOGame game = new XOGame();
         game.setCell('o', 0,0);
         game.setCell('x', 1,1);

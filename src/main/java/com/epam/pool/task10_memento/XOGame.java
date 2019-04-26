@@ -1,14 +1,13 @@
 package com.epam.pool.task10_memento;
 
 public class XOGame {
-
     private static final String GRID_FORMAT = "\n%c|%c|%c"
             + "\n—+—+—"
             + "\n%c|%c|%c"
             + "\n—+—+—"
             + "\n%c|%c|%c";
 
-    private char[][] grid = {{' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
+    private char[][] grid = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
 
     public XOGame() {
     }
